@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="jp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- a-frameを利用する URL:https://aframe.io -->
+    <script type="text/javascript" src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <!-- skywayを利用する  URL:https://webrtc.ecl.ntt.com -->
+    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <!-- skywayの画面共有機能 -->
+    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/screenshare-latest.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+  </head>
+  <body onload="load()">
+    <!-- 画面作成 世界に写すための板を置く -->
+    <a-scene>
+      <a-assets>
+        <video id="my-video" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline></video>
+      </a-assets>
+      <a-video src="#my-video" width="5" height="5" position="0 0 -5"></a-video>
+    </a-scene>
+  </body>
+</html>
